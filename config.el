@@ -2,7 +2,7 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-
+(beacon-mode 1)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
@@ -47,6 +47,13 @@
   (setq org-log-done 'time)
   (setq org-log-done 'note)
   )
+;; config fonts
+(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 12)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 14)
+      doom-big-font (font-spec :family "FiraCode Nerd Font" :size 18))
+(after! doom-themes
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
